@@ -7,6 +7,9 @@
 	<!--- Run AMCL -->
 	<include file="$(find cob_2dnav)/ros/launch/amcl_omni.launch" />
 
+	<!-- filters -->
+	<include file="$(find cob_2dnav)/ros/launch/filter_floor.launch" />
+
 	<!--- Run move base -->
 	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
 		<remap from="cmd_vel" to="base_controller/command"/>

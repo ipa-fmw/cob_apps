@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <launch>
 
-  <!-- Run ipa navigation -->
-  <include file="$(find cob_platform_ctrl)/ros/launch/platform_ctrl.launch"/>
+	<!-- filters -->
+	<include file="$(find cob_2dnav)/ros/launch/filter_floor.launch" />
+
+	<!-- Run ipa navigation -->
+	<include file="$(find cob_platform_ctrl)/ros/launch/platform_ctrl.launch"/>
 
 </launch>
